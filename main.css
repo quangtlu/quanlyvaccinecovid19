@@ -1,0 +1,134 @@
+.app{
+    background-image: url(https://www.icpac.net/media/images/ezgif.com-video-to-gif.original.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+.vaccine-list{
+    z-index: 0;
+
+}
+.tableFixHead{
+    overflow: auto;
+    height:480px;
+
+}
+.tableFixHead th{
+    position: sticky; top: -1px; z-index: 1;
+}
+.row-content:hover{
+    background-color: rgba(255,255,255,0.7);
+    color: #000;
+}
+.editRemove{
+    display:flex;
+    justify-content: space-between;
+}
+tbody{
+    font-size: 16px;
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+}
+
+table{
+    text-align: center;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px #000;
+}
+.header i{
+    font-size: 40px;
+    padding-left: 20px;
+    color: aqua;
+}
+.title{
+    color:#fff;
+    margin: 15px 0;
+}
+
+
+.control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.remove{
+    color: #fff;
+    cursor: pointer;
+}
+.remove:hover{
+    color: red;
+}
+.edit{
+    color:#007bff;
+    cursor: pointer;
+
+}
+.edit:hover{
+    color: blue;
+}
+.modal{
+    position: fixed;
+    top: 0; left: 0;right: 0; bottom: 0;
+    display:none;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.form-input{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow:5px 5px 50px rgba(0,0,0,0.5);
+    padding: 15px;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255,255,255,1);
+
+}
+.form-input__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 ;
+    color: red;
+    
+}
+.form-input__header-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+.close-btn{
+    font-size: 25px;
+    cursor: pointer;
+    color: red;
+
+}
+.close-btn:hover{
+    font-size: 28px;
+}
+label{
+    font-weight: bold;
+    font-size: 16px;
+    color:#007bff;
+
+}
+.form-group.invalid .form-control {
+    border-color: #f33a58;
+  }
+  
+  .form-group.invalid .form-message {
+    color: #f33a58;
+  }
+  
+  .form-message {
+    font-size: 14px;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+  }

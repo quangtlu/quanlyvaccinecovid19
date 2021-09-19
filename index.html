@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý vaccine covid 19</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="app">
+        <div class="vaccine-list">
+            <div class="container-fluid">
+                <div class="header">
+                    <h1 class="title">DANH SÁCH VACCINE COIVD 19</h1>
+                    <i class="fas fa-shield-virus"></i>
+                </div>
+                <div class="tableFixHead">
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">Tên</th>
+                            <th scope="col">Hãng sản xuất</th>
+                            <th scope="col">Quốc gia</th>
+                            <th scope="col">Loại vắc-xin</th>
+                            <th scope="col">Đối tượng tiêm</th>
+                            <th scope="col">Số mũi tiêm</th>
+                            <th scope="col">Khoảng cách giữa 2 mũi</th>
+                            <th scope="col">
+                                <div class="editRemove">
+                                    <span>Sửa</span>
+                                    <span>Xóa</span>
+    
+                                </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="row-table">
+                          <tr class="row-content">
+                            <td>BNT162b2</td>
+                            <td>Pfizer, Inc. và BioNTech</td>
+                            <td>China</td>
+                            <td>mRNA</td>
+                            <td>18 tuổi trở lên</td>
+                            <td>2</td>
+                            <td>21 ngày</td>
+                            <td>
+                                <div class="control">
+                                    <i class="edit fas fa-edit" onclick="
+                                         this.closest('.row-content').classList.add('clicked'),
+                                         modal.style.display = 'block',
+                                         submitBtn.innerHTML = 'Cập nhật'
+                                    "></i>
+                                    <i class="remove fas fa-trash-alt" onclick="this.closest('.row-content').style.display = 'none'"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr class="row-content">
+                            <td>BNT162b2</td>
+                            <td>Pfizer, Inc. và BioNTech</td>
+                            <td>China</td>
+                            <td>mRNA</td>
+                            <td>18 tuổi trở lên</td>
+                            <td>2</td>
+                            <td>21 ngày</td>
+                            <td>
+                                <div class="control">
+                                    <i class="edit fas fa-edit" onclick="
+                                         this.closest('.row-content').classList.add('clicked'),
+                                         modal.style.display = 'block',
+                                         submitBtn.innerHTML = 'Cập nhật'
+                                    "></i>
+                                    <i class="remove fas fa-trash-alt" onclick="this.closest('.row-content').style.display = 'none'"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr class="row-content">
+                            <td>Gam-COVID-Vac</td>
+                            <td>Gamaleya</td>
+                            <td>Nga</td>
+                            <td>mRNA</td>
+                            <td>18 tuổi trở lên</td>
+                            <td>2</td>
+                            <td>21 ngày</td>
+                            <td>
+                                <div class="control">
+                                    <i class="edit fas fa-edit" onclick="
+                                         this.closest('.row-content').classList.add('clicked'),
+                                         modal.style.display = 'block',
+                                         submitBtn.innerHTML = 'Cập nhật'
+                                    "></i>
+                                    <i class="remove fas fa-trash-alt" onclick="this.closest('.row-content').style.display = 'none'"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr class="row-content">
+                            <td>Vero Cell</td>
+                            <td>Sinopharm</td>
+                            <td>China</td>
+                            <td>mRNA</td>
+                            <td>18 tuổi trở lên</td>
+                            <td>2</td>
+                            <td>21 ngày</td>
+                            <td>
+                                <div class="control">
+                                    <i class="edit fas fa-edit" onclick="
+                                         this.closest('.row-content').classList.add('clicked'),
+                                         modal.style.display = 'block',
+                                         submitBtn.innerHTML = 'Cập nhật'
+                                    "></i>
+                                    <i class="remove fas fa-trash-alt" onclick="this.closest('.row-content').style.display = 'none'"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr class="row-content">
+                            <td>Comirnaty </td>
+                            <td>Pfizer, Inc. và BioNTech</td>
+                            <td>US</td>
+                            <td>mRNA</td>
+                            <td>18 tuổi trở lên</td>
+                            <td>2</td>
+                            <td>21 ngày</td>
+                            <td>
+                                <div class="control">
+                                    <i class="edit fas fa-edit" onclick="
+                                         this.closest('.row-content').classList.add('clicked'),
+                                         modal.style.display = 'block',
+                                         submitBtn.innerHTML = 'Cập nhật'
+                                    "></i>
+                                    <i class="remove fas fa-trash-alt" onclick="this.closest('.row-content').style.display = 'none'"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr class="row-content">
+                            <td>Spikevax </td>
+                            <td>Moderna </td>
+                            <td>US</td>
+                            <td>mRNA</td>
+                            <td>18 tuổi trở lên</td>
+                            <td>2</td>
+                            <td>21 ngày</td>
+                            <td>
+                                <div class="control">
+                                    <i class="edit fas fa-edit" onclick="
+                                         this.closest('.row-content').classList.add('clicked'),
+                                         modal.style.display = 'block',
+                                         submitBtn.innerHTML = 'Cập nhật'
+                                    "></i>
+                                    <i class="remove fas fa-trash-alt" onclick="this.closest('.row-content').style.display = 'none'"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr class="row-content">
+                            <td>Janssen </td>
+                            <td>Janssen Pharmaceutica </td>
+                            <td>Bỉ</td>
+                            <td>mRNA</td>
+                            <td>18 tuổi trở lên</td>
+                            <td>2</td>
+                            <td>21 ngày</td>
+                            <td>
+                                <div class="control">
+                                    <i class="edit fas fa-edit" onclick="
+                                         this.closest('.row-content').classList.add('clicked'),
+                                         modal.style.display = 'block',
+                                         submitBtn.innerHTML = 'Cập nhật'
+                                    "></i>
+                                    <i class="remove fas fa-trash-alt" onclick="this.closest('.row-content').style.display = 'none'"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr class="row-content">
+                            <td>Janssen </td>
+                            <td>Janssen Pharmaceutica </td>
+                            <td>Bỉ</td>
+                            <td>mRNA</td>
+                            <td>18 tuổi trở lên</td>
+                            <td>2</td>
+                            <td>21 ngày</td>
+                            <td>
+                                <div class="control">
+                                    <i class="edit fas fa-edit" onclick="
+                                         this.closest('.row-content').classList.add('clicked'),
+                                         modal.style.display = 'block',
+                                         submitBtn.innerHTML = 'Cập nhật'
+                                    "></i>
+                                    <i class="remove fas fa-trash-alt" onclick="this.closest('.row-content').style.display = 'none'"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr class="row-content">
+                            <td>Janssen </td>
+                            <td>Janssen Pharmaceutica </td>
+                            <td>Bỉ</td>
+                            <td>mRNA</td>
+                            <td>18 tuổi trở lên</td>
+                            <td>2</td>
+                            <td>21 ngày</td>
+                            <td>
+                                <div class="control">
+                                    <i class="edit fas fa-edit" onclick="
+                                         this.closest('.row-content').classList.add('clicked'),
+                                         modal.style.display = 'block',
+                                         submitBtn.innerHTML = 'Cập nhật'
+                                    "></i>
+                                    <i class="remove fas fa-trash-alt" onclick="this.closest('.row-content').style.display = 'none'"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                </div>
+                  <button type="button" class="mt-2 createBtn btn btn-primary">Thêm mới</button>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="form-input animate__animated animate__fadeIn">
+                <div class="container">
+                    <div class="form-input__header">
+                        <span class="form-input__header-title">Nhập đầy đủ thông tin vắc-xin</span>
+                        <i class="close-btn fas fa-times"></i>
+                    </div>
+                    <form id="form-create">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="vaccine-name">Tên vắc-xin</label>
+                                <input type="name" class="form-control" id="vaccine-name" placeholder="Tên vắc-xin">
+                                 <span class="form-message"></span>
+    
+                            </div>
+                            <div class="form-group col-md-3">
+                            <label for="inputHSX">Hãng sản xuất</label>
+                            <input type="text" class="form-control" id="inputHSX" placeholder="Hãng sản suất">
+                            <span class="form-message"></span>
+    
+                            </div>
+                            <div class="form-group col-md-5">
+                            <label for="country">Quốc gia</label>
+                            <div>
+                                <select name="Quốc gia" id="country" class="form-control">
+                                    <option  value="">Việt Nam</option>
+                                </select>
+                
+                            </div>
+    
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="vaccine-type">Loại vắc-xin</label>
+                                <div>
+                                    <select name="" id="vaccine-type" class="form-control">
+                                        <option value="mRNA">Vắc-xin mRNA</option>
+                                        <option value="véc-tơ">Vắc-xin véc-tơ</option>
+                                        <option value="tiểu đơn vị protein">Vắc-xin tiểu đơn vị protein</option>
+                                    </select>
+            
+                                </div>
+    
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="age">Đố tượng tiêm</label>
+                                <div>
+                                    <select name="" id="age" class="form-control">
+                                        <option value="12 đến 15 tuổi">12 đến 15 tuổi</option>
+                                        <option value="18 tuổi trở lên" selected>18 tuổi trở lên</option>
+                                    </select>
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="number">Số mũi tiêm</label>
+                                <div>
+                                    <select name="" id="number" class="form-control">
+                                        <option value="1 ">1 mũi</option>
+                                        <option value="2 " selected>2 mũi</option>
+                                        <option value="3 ">3 mũi</option>
+                                    </select>
+                                </div>
+    
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="days">Khoảng cách giữa các mũi</label>
+                                <input type="number" class="form-control" id="days" class="form-control" placeholder="Nhập số ngày">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                        <button type="submit" id="submitBtn" class="btn btn-primary">Thêm mới</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="./Thư viện form đăng ký, đăng nhập/validator.js"></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+         
+         Validator({
+             form: '#form-create',
+             formGroupSelector: '.form-group',
+             errorSelector: '.form-message',
+             rules: [
+                 Validator.isRequired('#vaccine-name', 'Vui lòng nhập tên vắc-xin'),
+                 Validator.isRequired('#inputHSX', 'Vui lòng nhập tên hãng sản xuất'),
+                 Validator.isRequired('#days', 'Vui lòng nhập số ngày'),
+                 
+                ],
+                onSubmit: function () {
+                    const vaccineName = $('#vaccine-name')
+                    const hsx = $('#inputHSX')
+                    const country = $('#country')
+                    const vaccineType = $('#vaccine-type')
+                    const age = $('#age')
+                    const number = $('#number')
+                    const days = $('#days')
+                    const rowTable = $('.row-table')
+
+                    if(submitBtn.innerHTML == "Cập nhật"){
+                        document.querySelector(".clicked").style.display = "none"
+                        for(var i = 0; i<document.querySelectorAll('.row-content').length; i++){
+                         document.querySelectorAll('.row-content')[i].classList.remove('clicked')
+                        }
+                    }
+                    rowTable.innerHTML += `
+                    <tr class="row-content">
+                        <td>${vaccineName.value}</td>
+                        <td>${hsx.value}</td>
+                        <td>${country.value}</td>
+                        <td>${vaccineType.value}</td>
+                        <td>${age.value}</td>
+                        <td>${number.value}</td>
+                        <td>${days.value} ngày</td>
+                        <td>
+                            <div class="control">
+                                <i class="edit fas fa-edit" onclick="
+                                    this.closest('.row-content').classList.add('clicked'),
+                                    modal.style.display = 'block',
+                                    submitBtn.innerHTML = 'Cập nhật'
+                                "></i>
+                                <i class="remove fas fa-trash-alt" onclick="this.closest('.row-content').style.display = 'none'"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    `
+                    modal.style.display = "none"
+
+                }
+                
+            });
+            
+            
+        });
+        
+    </script>
+    
+</body>
+</html>
